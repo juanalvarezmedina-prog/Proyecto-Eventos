@@ -1,6 +1,5 @@
 {
     "java.project.sourcePaths": [
-        "src",
-        "Proyecto-Eventos-pokemon-tcg/src/modelo"
+        "src"
     ]
 }
