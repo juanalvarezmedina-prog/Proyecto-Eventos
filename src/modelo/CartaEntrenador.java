@@ -1,10 +1,11 @@
-public class CartaEntrenador {
+public class CartaEntrenador extends Carta {
 
     private String descripcion;
     private String rareza;
     private String ilustracion;
 
-    public CartaEntrenador(String descripcion, String rareza, String ilustracion) {
+    public CartaEntrenador(String nombre, String descripcion, String rareza, String ilustracion) {
+        super(nombre);
         this.descripcion = descripcion;
         this.rareza = rareza;
         this.ilustracion = ilustracion;
