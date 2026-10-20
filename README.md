@@ -1,5 +1,5 @@
 # Proyecto-Eventos
 INTEGRANTES
-Juan Camilo Alvarez Medina
-Joan Manuel Arcila Cano
-Juan Jose Cardona Rodriguez
+Juan Camilo Alvarez Medina - 2569416
+Joan Manuel Arcila Cano - 2569151
+Juan Jose Cardona Rodriguez - 2569066
