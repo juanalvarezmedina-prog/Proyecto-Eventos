@@ -1,3 +1,4 @@
+package modelo;
 public class CartaEntrenador extends Carta {
 
     private String descripcion;
