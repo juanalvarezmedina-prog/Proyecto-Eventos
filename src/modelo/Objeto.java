@@ -1,3 +1,4 @@
+package modelo;
 public class Objeto extends Carta {
 
     String descripcion;
