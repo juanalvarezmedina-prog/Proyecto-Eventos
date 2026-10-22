@@ -1,27 +1,22 @@
 package modelo;
 
-public class Pokemon {
+public class Pokemon extends Carta {
 
-    private String nombre;
-    private short puntosDeVida;
     private String tipo;
     private short PS;
     private byte costoretirada;
     // se debe de crear una lista de ataques, entonces toca crear la clase
     private boolean ex;
-    
-    public String getNombre() {
-        return nombre;
+
+    public Pokemon(String nombre, String tipo, short pS, byte costoretirada, boolean ex) {
+        super(nombre);
+        
+        this.tipo = tipo;
+        PS = pS;
+        this.costoretirada = costoretirada;
+        this.ex = ex;
     }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    public short getPuntosDeVida() {
-        return puntosDeVida;
-    }
-    public void setPuntosDeVida(short puntosDeVida) {
-        this.puntosDeVida = puntosDeVida;
-    }
+
     public String getTipo() {
         return tipo;
     }
