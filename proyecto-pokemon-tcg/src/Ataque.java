@@ -19,5 +19,5 @@ public class Ataque {
     public void setDano(Short dano) {
         this.dano = dano;
     }
-    //le dejo a camilo el metodo ataque, ya que el es el que lo entiende   
+    //le dejo a camilo el metodo ataque, ya que el es el que lo entiende       
 }
