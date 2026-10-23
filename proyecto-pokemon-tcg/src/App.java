@@ -1,5 +1,3 @@
-import modelo.Carta;
-import modelo.Pokemon;
 
 public class App {
     public static void main(String[] args) throws Exception {
