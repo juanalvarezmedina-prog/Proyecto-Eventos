@@ -19,11 +19,12 @@ public class Mazo {
     }
 
     public Pokemon buscarBasico() {
-        for (i = 0; i < mazo.size(); i++) {
+        for (int i = 0; i < mazo.size(); i++) {
             if (mazo.get(i) instanceof PokemonBasico) {
                 return (PokemonBasico) mazo.get(i);
             }
         }
+        return null;
     }
 
     public void devolverCartas(java.util.List<Carta> cartas) {
@@ -31,20 +32,18 @@ public class Mazo {
     }
 
     public boolean esValido() {
-        byte cantidadCartas = mazo.size();
+        int cantidadCartas = mazo.size();
         if (cantidadCartas > 20) {
             return false;
         }
 
-        byte cantidadPokemons = 0;
-        for (i = 0; i < mazo.size(); i++) {
+        int cantidadPokemons = 0;
+        for (int i = 0; i < mazo.size(); i++) {
             if (mazo.get(i) instanceof Pokemon) {
-                return true;
+                cantidadPokemons++;
             }
-            else{
-                return false;
-            }
-        }   
+        }
+        return cantidadPokemons >= 6;
     }
 
     public boolean estaVacio() {
@@ -56,7 +55,7 @@ public class Mazo {
         }
     }
 
-    public byte cantidadCartas() {
+    public int cantidadCartas() {
         return mazo.size();
     }
 }
