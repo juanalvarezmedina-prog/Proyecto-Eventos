@@ -24,4 +24,4 @@ public abstract class Pokemon extends Carta {
     }
 
     public abstract int getPuntosPremio();
-}    
+}
