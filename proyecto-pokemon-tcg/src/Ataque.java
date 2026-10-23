@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Ataque {
     private String nombre;
     //private TipoEnergia tipoEnergia;
@@ -19,5 +21,16 @@ public class Ataque {
     public void setDano(Short dano) {
         this.dano = dano;
     }
-    //le dejo a camilo el metodo ataque, ya que el es el que lo entiende       
+    public boolean puedeUsarse(List<TipoEnergia> adjuntas) {
+        byte contador = 0;
+        for (TipoEnergia energia : adjuntas) {
+            if (energia == TipoEnergia.FUEGO) {
+                contador++;
+            }
+        }
+        if (contador >= costo) {
+            return true;
+        }
+        return false;
+    }
 }
