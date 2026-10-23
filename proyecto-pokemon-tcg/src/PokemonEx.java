@@ -7,7 +7,7 @@ public class PokemonEx extends Pokemon {
         this.psActuales = psMaximos;
     }
 
-     
+
     public int getPuntosPremio() {
         return 2;
     }
