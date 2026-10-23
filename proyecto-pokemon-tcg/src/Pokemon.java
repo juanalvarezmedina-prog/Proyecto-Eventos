@@ -1,44 +1,27 @@
-public class Pokemon extends Carta {
+public abstract class Pokemon extends Carta {
 
-    private String tipo;
-    private short PS;
-    private byte costoretirada;
-    // se debe de crear una lista de ataques, entonces toca crear la clase
-    private boolean ex;
+    private TipoEnergia tipo;
+    private int psMaximos;
+    private int costoRetirada;
 
-    public Pokemon(String nombre, String tipo, short pS, byte costoretirada, boolean ex) {
+    public Pokemon(String nombre, TipoEnergia tipo, int psMaximos, int costoRetirada) {
         super(nombre);
-        
         this.tipo = tipo;
-        PS = pS;
-        this.costoretirada = costoretirada;
-        this.ex = ex;
+        this.psMaximos = psMaximos;
+        this.costoRetirada = costoRetirada;
     }
 
-    public String getTipo() {
+    public TipoEnergia getTipo() {
         return tipo;
     }
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-    public short getPS() {
-        return PS;
-    }
-    public void setPS(short pS) {
-        PS = pS;
-    }
-    public byte getCostoretirada() {
-        return costoretirada;
-    }
-    public void setCostoretirada(byte costoretirada) {
-        this.costoretirada = costoretirada;
-    }
-    public boolean isEx() {
-        return ex;
-    }
-    public void setEx(boolean ex) {
-        this.ex = ex;
-    }
-    
 
+    public int getPsMaximos() {
+        return psMaximos;
+    }
+
+    public int getCostoRetirada() {
+        return costoRetirada;
+    }
+
+    public abstract int getPuntosPremio();
 }
