@@ -93,7 +93,7 @@ public class Jugador {
         if (c.esSoporte() && yaUsoSoporte) {
             return false;
         }
-        // Polimorfismo: no sabemos qué carta es, cada una ejecuta su propio efecto
+        // Polimorfismo porque no sabemos qué carta es, cada una ejecuta su propio efecto
         boolean seJugo = c.activar(this, rival);
         if (seJugo) {
             if (c.esSoporte()) {
