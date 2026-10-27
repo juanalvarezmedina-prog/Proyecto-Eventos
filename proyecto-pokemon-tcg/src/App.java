@@ -1,8 +1,7 @@
 
-
 public class App {
     public static void main(String[] args) {
-        // 1. Cartas y PokemonEnJuego
+        
         Pokemon pikachu = new PokemonBasico("Pikachu", TipoEnergia.Electrico, 60, 1);
         pikachu.agregarAtaque(new Ataque("Mordisco", TipoEnergia.Electrico, (byte) 1, (short) 20));
 
@@ -15,13 +14,13 @@ public class App {
         System.out.println(pikachu.getNombre() + " PS: " + p1.getPsActuales());
         System.out.println("Ataques: " + pikachu.getAtaques().size());
 
-        // 2. Energía y ataque
+        
         Ataque mordisco = pikachu.getAtaques().get(0);
         System.out.println("¿Puede atacar sin energía? " + mordisco.puedeUsarse(p1.getEnergias())); // false
         p1.adjuntarEnergia(TipoEnergia.Electrico);
         System.out.println("¿Puede atacar con energía? " + mordisco.puedeUsarse(p1.getEnergias()));  // true
 
-        // 3. Daño y curación (Squirtle es Agua, débil a Eléctrico: 20 + 20 = 40)
+        
         p2.recibirDano(40);
         System.out.println("Squirtle PS: " + p2.getPsActuales());  // esperado: 20
         p2.curar(20);
