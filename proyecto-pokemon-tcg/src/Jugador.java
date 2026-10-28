@@ -177,4 +177,26 @@ public class Jugador {
             robarCarta();
         }
     }
+    public boolean colocarActivoDesdeMano(Pokemon c) {
+    if (!mano.contains(c) || campo.getActivo() != null) {
+        return false;
+    }
+    campo.setActivo(new PokemonEnJuego(c));
+    mano.remove(c);
+    return true;
+    }
+    public boolean necesitaReemplazo() {
+    return campo.getActivo() == null && campo.tienePokemonEnJuego();
+}
+
+public boolean reemplazarActivo(int indiceBanco) {
+    if (campo.getActivo() != null) {
+        return false;
+    }
+    if (indiceBanco < 0 || indiceBanco >= campo.getBanco().size()) {
+        return false;
+    }
+    campo.promoverDelBanco(indiceBanco);
+    return true;
+}
 }
