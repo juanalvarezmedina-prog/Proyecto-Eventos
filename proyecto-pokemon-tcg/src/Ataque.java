@@ -1,36 +1,43 @@
 import java.util.List;
 
 public class Ataque {
-    private String nombre;
-    //private TipoEnergia tipoEnergia;
-    private Byte costo;
-    private Short dano;
+    private final String nombre;
+    private final TipoEnergia tipoEnergia;
+    private final byte costo;
+    private final short dano;
+// FINAL ES PARA QUE EN NINGUN LADO EL ATRIBUTO PUEDA SER MODIFICADO, SOLO SE PUEDE MODIFICAR EN EL CONSTRUCTOR
 
+    public Ataque(String nombre, TipoEnergia tipoEnergia, byte costo, short dano) {
+        this.nombre = nombre;
+        this.tipoEnergia = tipoEnergia;
+        this.costo = costo;
+        this.dano = dano;
+    }
     public String getNombre() {
         return nombre;
     }
     public Byte getCosto() {
         return costo;
     }
-    public void setCosto(Byte costo) {
-        this.costo = costo;
+    public TipoEnergia getTipoEnergia() {
+        return tipoEnergia;
     }
     public Short getDano() {
         return dano;
     }
-    public void setDano(Short dano) {
-        this.dano = dano;
-    }
-    public boolean puedeUsarse(List<TipoEnergia> adjuntas) {
-        byte contador = 0;
-        for (TipoEnergia energia : adjuntas) {
-            if (energia == TipoEnergia.FUEGO) {
-                contador++;
+
+    //le dejo a camilo el metodo ataque, ya que el es el que lo entiende   
+    public boolean puedeUsarse(List<TipoEnergia> energiasAgregadas) {
+        if (tipoEnergia == TipoEnergia.Incoloro) {
+            return energiasAgregadas.size() >= costo;
+        }
+        int Acorde = 0;
+        for (TipoEnergia energia : energiasAgregadas) {
+            if (energia == tipoEnergia) {
+                Acorde++;
             }
         }
-        if (contador >= costo) {
-            return true;
-        }
-        return false;
+        return Acorde >= costo;
     }
 }
+

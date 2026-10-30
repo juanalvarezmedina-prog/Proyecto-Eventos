@@ -10,18 +10,18 @@ public class Misty extends Entrenador {
             return false;
         }
         for (int i = 0; i < 3; i++) {
-            objetivo.adjuntarEnergia(TipoEnergia.AGUA);
+            objetivo.adjuntarEnergia(TipoEnergia.Agua);
         }
         return true;
     }
 
     private PokemonEnJuego buscarPokemonAgua(Campo campo) {
         PokemonEnJuego activo = campo.getActivo();
-        if (activo != null && activo.getCarta().getTipo() == TipoEnergia.AGUA) {
+        if (activo != null && activo.getCarta().getTipo() == TipoEnergia.Agua) {
             return activo;
         }
         for (PokemonEnJuego p : campo.getBanco()) {
-            if (p.getCarta().getTipo() == TipoEnergia.AGUA) {
+            if (p.getCarta().getTipo() == TipoEnergia.Agua) {
                 return p;
             }
         }
