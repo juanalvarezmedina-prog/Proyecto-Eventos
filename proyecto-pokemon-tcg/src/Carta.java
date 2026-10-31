@@ -8,4 +8,5 @@ public abstract class Carta {
     public String getNombre() {
         return nombre;
     }
+    public abstract void mostrarInformacion();
 }

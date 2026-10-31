@@ -1,3 +1,4 @@
+import java.util.List;
 
 public class App {
     public static void main(String[] args) {
@@ -34,25 +35,11 @@ public class App {
             System.out.println("Mazo personalizado seleccionado");
             System.out.println(jugador1 + ", elija sus cartas:");
 
-            ////////////////
-            System.out.println("Pikachu // Tipo: Eléctrico // PS: 60 // ataque1 = Mordisco(1 ⚡) 20 daño // Costo de retirada: 1 ☆");
-            System.out.println("Charmander // Tipo: Fuego // PS: 60 // ataque1 = Ascuas(1 🔥) 30 daño // Costo de retirada: 1 ☆");
-            System.out.println("Squirtle // Tipo: Agua // PS: 60 // ataque1 = Placaje(1 💧) 20 daño // Costo de retirada: 1 ☆");
-            System.out.println("Jigglypuff // Tipo: Incoloro // PS: 70 // ataque1 = Golpe(1 ☆) 20 daño // Costo de retirada: 1 ☆");
-            System.out.println("Magikarp // Tipo: Agua // PS: 30 // ataque1 = Chapoteo(1 💧) 10 daño // Costo de retirada: 1 ☆");
-            System.out.println("Snorlax // Tipo: Incoloro // PS: 150 // ataque1 = Golpe Cuerpo(3 ☆) 100 daño // Costo de retirada: 4 ☆");
-            System.out.println("Mewtwo EX // Tipo: Psiquico // PS: 150 // ataque1 = Ataque Psiquico(2 🔮) 50 daño // ataque2 = Psicorrayo(3 🔮) 150 daño // Costo de retirada: 2 ☆");
-            System.out.println("Zapdos EX // Tipo: Eléctrico // PS: 130 // ataque1 = Picotazo(1 ☆) 30 daño // ataque2 = Tormenta Eléctrica(3 ⚡) 100 daño // Costo de retirada: 1 ☆");
-            System.out.println("Moltres EX // Tipo: Fuego // PS: 130 // ataque1 = Aleteo(1 ☆) 30 daño // ataque2 = Danza Infernal(3 🔥) 70 daño // Costo de retirada: 2 ☆");
-            System.out.println("Articuno EX // Tipo: Agua  // PS: 130 // ataque1 = Viento Helado(1 💧) 30 daño // ataque2 = Ventisca(3 💧) 100 daño // Costo de retirada: 2 ☆");
-            ////////////////
-            ///
-            System.out.println("Investigacion del Profesor // Tipo: Soporte // Efecto: Roba 2 cartas");
-            System.out.println("Pocion // Tipo: Objeto // Efecto: Cura 20 PS al Pokémon Activo");
-            System.out.println("Pokeball // Tipo: Objeto // Efecto: Busca un pokemon básico en el mazo y lo pone en la mano");
-            System.out.println("Turbo Velocidad // Tipo: Objeto // Efecto: Reduce en 1 el costo de retirada del Pokémon Activo hasta el final del turno");
-            System.out.println("Misty // Tipo: Soporte // Efecto: Adjunta 1 a 3 energias de agua a uno de tus pokeon del tipo agua de manera aleatoria");
-            ////////////////
+           List<String> nombres = CartaFactory.nombresDisponibles();
+            for (int i = 0; i < nombres.size(); i++) {
+                Carta c = CartaFactory.crearCarta(nombres.get(i));
+                 System.out.println((i + 1) + ". " + /* info de c */);
+}
         } else {
                 System.out.println("Opción inválida, se seleccionará el mazo predefinido");
         }

@@ -12,4 +12,10 @@ public class Pocion extends Entrenador {
         activo.curar(20);
         return true;
     }
+
+    @Override
+    public void mostrarInformacion() {
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Efecto: Cura 20 PS al Pokémon Activo de tu lado del campo.");
+    }
 }

@@ -12,4 +12,10 @@ public class TurboVelocidad extends Entrenador {
         activo.aplicarTurbo();
         return true;
     }
+
+    @Override 
+    public void mostrarInformacion() {
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Efecto: reduce en 1 el coste de retirada del Pokémon Activo de tu lado del campo hasta el final del próximo turno de tu rival.");
+    }
 }
