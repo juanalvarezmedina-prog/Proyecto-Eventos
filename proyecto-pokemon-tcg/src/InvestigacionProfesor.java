@@ -10,4 +10,10 @@ public class InvestigacionProfesor extends Entrenador {
         jugador.robarCarta();
         return true;
     }
+
+    @Override
+    public void mostrarInformacion() {
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Efecto: Roba 2 cartas de tu mazo.");
+    }
 }

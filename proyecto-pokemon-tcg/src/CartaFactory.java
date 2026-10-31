@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class CartaFactory {
 
     public static Carta crearCarta(String nombre) {
@@ -61,4 +63,24 @@ public class CartaFactory {
                 return null;
         }
     }
+    public List<String> nombresDisponibles() {
+        return List.of(
+                "Pikachu",
+                "Charmander",
+                "Squirtle",
+                "Jigglypuff",
+                "Magikarp",
+                "Snorlax",
+                "Mewtwo EX",
+                "Zapdos EX",
+                "Moltres EX",
+                "Articuno EX",
+                "Investigacion del Profesor",
+                "Pocion",
+                "Pokeball",
+                "Turbo Velocidad",
+                "Misty"
+        );
+    }
 }
+

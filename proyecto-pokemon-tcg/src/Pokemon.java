@@ -39,4 +39,19 @@ public abstract class Pokemon extends Carta {
     }
 
     public abstract int getPuntosPremio();
+
+    @Override 
+    public void mostrarInformacion() {
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Tipo: " + getTipo());
+        System.out.println("PS Máximos: " + getPsMaximos());
+        System.out.println("Costo de Retirada: " + getCostoRetirada());
+        for (int i = 0; i < ataques.size(); i++) {
+            Ataque ataque = ataques.get(i);
+            System.out.println("Ataque " + (i + 1) + ": " + ataque.getNombre() +
+                    ", Tipo: " + ataque.getTipoEnergia() +
+                    ", Costo: " + ataque.getCosto() +
+                    ", Daño: " + ataque.getDano());
+        }
+    }
 }

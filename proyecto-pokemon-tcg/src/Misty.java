@@ -27,4 +27,10 @@ public class Misty extends Entrenador {
         }
         return null;
     }
+
+    @Override 
+    public void mostrarInformacion() {
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Efecto: Adjunta 3 Energías de Agua a un Pokémon de Agua en tu campo.");
+    }
 }
