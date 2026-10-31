@@ -148,6 +148,7 @@ public class Partida {
             int indice = consola.elegirDelBanco(rival, false);
             rival.reemplazarActivo(indice);
         }
+        
     }
 
     // Revisa puntos de premio y Pokémon en juego. Si alguien ganó, lo guarda en 'ganador'

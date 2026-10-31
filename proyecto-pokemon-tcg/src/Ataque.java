@@ -25,8 +25,7 @@ public class Ataque {
     public Short getDano() {
         return dano;
     }
-
-    //le dejo a camilo el metodo ataque, ya que el es el que lo entiende   
+  
     public boolean puedeUsarse(List<TipoEnergia> energiasAgregadas) {
         if (tipoEnergia == TipoEnergia.Incoloro) {
             return energiasAgregadas.size() >= costo;
