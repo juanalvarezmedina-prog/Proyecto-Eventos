@@ -148,6 +148,7 @@ public class Partida {
             int indice = consola.elegirDelBanco(rival, false);
             rival.reemplazarActivo(indice);
         }
+        this.turno++;
         
     }
 
