@@ -63,7 +63,7 @@ public class CartaFactory {
                 return null;
         }
     }
-    public List<String> nombresDisponibles() {
+    public static  List<String> nombresDisponibles() {
         return List.of(
                 "Pikachu",
                 "Charmander",

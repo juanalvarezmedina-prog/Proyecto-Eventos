@@ -38,14 +38,14 @@ public class App {
            List<String> nombres = CartaFactory.nombresDisponibles();
             for (int i = 0; i < nombres.size(); i++) {
                 Carta c = CartaFactory.crearCarta(nombres.get(i));
-                 System.out.println((i + 1) + ". " + /* info de c */);
-}
+                System.out.println("--- " + (i + 1) + " ---");
+                c.mostrarInformacion();
+                System.out.println();
+            }
         } else {
                 System.out.println("Opción inválida, se seleccionará el mazo predefinido");
         }
 
-        
-        
         Jugador player1 = new Jugador(jugador1, null, null  );
         System.out.println("Jugador 2, ingrese su nombre:");
         String jugador2 = System.console().readLine();
